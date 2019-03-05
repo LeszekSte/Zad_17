@@ -1,29 +1,24 @@
 public class EulerProject {
     int zadanie1(int brake) {
-        int sum1 = 0;
-        int befor = 1;
-       int after =0;
-        int suma = 0;
+        int sum1 = 1;
+        int sum2 = 1;
+        int suma = 1;
+        int sumEnd = 0;
+        boolean ok = true;
 
 
         do {
-
-            sum1 = sum1 + befor;
-            sum = sum1;
-            if (sum1 == 1)
-                sum1 = 2;
-            System.out.println("Sum1 " + sum1);
-            if (sum1 % 2 == 0) {
-                suma = sum1;
-                System.out.println("Suma -- " + suma);
+            suma = sum1 + sum2;
+            if (suma % 2 == 0) {
+                sumEnd += suma;
             }
-
-
-        } while (brake > sum1);
-
-
-        return suma;
+            sum2 = sum1;
+            sum1 = suma;
+            if (ok) {
+                suma = 1;
+                ok = false;
+            }
+        } while (brake > suma);
+        return sumEnd;
     }
-
-
 }
