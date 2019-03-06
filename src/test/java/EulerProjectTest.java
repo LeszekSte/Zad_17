@@ -40,5 +40,18 @@ public class EulerProjectTest {
         assertThat(result, is(188));
 
     }
+    
+        @Test
+    public void shouldReturn188For144zad2() {
+
+        //given
+        EulerProject eulerProject = new EulerProject();
+        // when
+        int result = eulerProject.zadanie2(144);
+        //then
+        assertThat(result, is(188));
+
+    }
+    
 
 }
